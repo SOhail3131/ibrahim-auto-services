@@ -328,39 +328,43 @@
                   <div class="flex items-start space-x-4">
                         <svg class="w-8 h-8 text-garage-blue flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h.01M7 21h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
                         <div>
-                            <section style="max-width:500px;margin:auto;padding:20px;border:1px solid #ddd;border-radius:12px;font-family:Arial;">
-<h2 style="margin-bottom:20px;">Opening Hours</h2>
+                            <div style="max-width:500px;margin:auto;border:1px solid #555;border-radius:14px;padding:22px;font-family:'Segoe UI',sans-serif;">
+<h2 style="margin-bottom:18px;">Opening Hours</h2>
 
-<div class="day"><span>Monday</span><span>9 am – 8 pm</span></div>
-<div class="day"><span>Tuesday</span><span>9 am – 8 pm</span></div>
-<div class="day"><span>Wednesday</span><span>9 am – 8 pm</span></div>
-<div class="day"><span>Thursday</span><span>9 am – 8 pm</span></div>
-<div class="day"><span>Friday</span><span>9 am – 12 pm</span></div>
-<div class="day"><span>Saturday</span><span>9 am – 8 pm</span></div>
-<div class="day"><span>Sunday</span><span>9 am – 8 pm</span></div>
+<div class="oh-day">Monday <span>9 am – 8 pm</span></div>
+<div class="oh-day">Tuesday <span>9 am – 8 pm</span></div>
+<div class="oh-day">Wednesday <span>9 am – 8 pm</span></div>
+<div class="oh-day">Thursday <span>9 am – 8 pm</span></div>
+<div class="oh-day">Friday <span>9 am – 12 pm</span></div>
+<div class="oh-day">Saturday <span>9 am – 8 pm</span></div>
+<div class="oh-day">Sunday <span>9 am – 8 pm</span></div>
 
-</section>
+</div>
 
 <style>
-.day{
+.oh-day{
 display:flex;
 justify-content:space-between;
-padding:6px 0;
-color:#777;
+padding:10px 0;
+color:#bbb;
+font-size:16px;
 }
 
-.today{
-color:#000;
-font-weight:bold;
+.oh-day span{
+margin-left:40px;
+}
+
+.oh-today{
+color:#4da3ff !important;
+font-weight:600;
 }
 </style>
 
 <script>
-let days=document.querySelectorAll(".day");
-let today=new Date().getDay();
-
-let index=today===0?6:today-1;
-days[index].classList.add("today");
+let d=new Date().getDay();
+let days=document.querySelectorAll(".oh-day");
+let i=d===0?6:d-1;
+days[i].classList.add("oh-today");
 </script>
                         </div>
                     </div>
