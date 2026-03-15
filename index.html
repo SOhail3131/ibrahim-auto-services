@@ -328,9 +328,40 @@
                   <div class="flex items-start space-x-4">
                         <svg class="w-8 h-8 text-garage-blue flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h.01M7 21h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
                         <div>
-                            <h3 class="text-2xl font-semibold mb-1">Working Hours</h3>
-                            <p class="text-gray-300">Monday - Sunday: 9:00 AM – 7:00 PM</p>
-                            <p class="text-gray-300 font-bold text-garage-red">Friday: Closed</p>
+                            <section style="max-width:500px;margin:auto;padding:20px;border:1px solid #ddd;border-radius:12px;font-family:Arial;">
+<h2 style="margin-bottom:20px;">Opening Hours</h2>
+
+<div class="day"><span>Monday</span><span>9 am – 8 pm</span></div>
+<div class="day"><span>Tuesday</span><span>9 am – 8 pm</span></div>
+<div class="day"><span>Wednesday</span><span>9 am – 8 pm</span></div>
+<div class="day"><span>Thursday</span><span>9 am – 8 pm</span></div>
+<div class="day"><span>Friday</span><span>9 am – 12 pm</span></div>
+<div class="day"><span>Saturday</span><span>9 am – 8 pm</span></div>
+<div class="day"><span>Sunday</span><span>9 am – 8 pm</span></div>
+
+</section>
+
+<style>
+.day{
+display:flex;
+justify-content:space-between;
+padding:6px 0;
+color:#777;
+}
+
+.today{
+color:#000;
+font-weight:bold;
+}
+</style>
+
+<script>
+let days=document.querySelectorAll(".day");
+let today=new Date().getDay();
+
+let index=today===0?6:today-1;
+days[index].classList.add("today");
+</script>
                         </div>
                     </div>
                 </div>
